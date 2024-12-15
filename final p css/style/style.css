@@ -1,0 +1,387 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.home {
+  height: 100vh;
+  background: linear-gradient(rgba(0, 0, 0.2, 0.2), #250029),
+    url("../imgs/image_downloader_1688829057028.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+.navbar {
+  position: fixed;
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  padding: 20px;
+
+  backdrop-filter: blur(5px);
+  z-index: 100;
+}
+
+.list {
+  display: flex;
+  list-style: none;
+}
+
+.item {
+  margin-left: 30px;
+  color: #250029;
+  font-weight: 600;
+  transition: 0.5s;
+  text-shadow: 1px 1px 3px black;
+}
+
+.links .list li a {
+  color: #250029;
+  text-decoration: none;
+  transition: 0.5s;
+  -webkit-transition: 0.5s;
+  -moz-transition: 0.5s;
+  -ms-transition: 0.5s;
+  -o-transition: 0.5s;
+}
+
+.links .list li a:hover {
+  color: white;
+  cursor: pointer;
+}
+
+.logo h3 {
+  font-weight: 600;
+  color: rgb(85, 32, 86);
+}
+
+.txtContainer {
+  text-align: center;
+  padding-top: 180px;
+}
+
+.txtContainer h1 {
+  font-size: 110px;
+  font-weight: 700;
+  color: white;
+}
+
+.txtContainer p {
+  font-size: 30px;
+  font-weight: 500;
+  color: white;
+}
+
+.links {
+  margin-left: 650px;
+}
+
+.btnscontainer {
+  text-align: center;
+  padding-top: 30px;
+  margin-top: 30px;
+}
+
+.btnscontainer a {
+  color: white;
+  display: inline-block;
+  text-decoration: none;
+  border: 1px solid white;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  width: 150px;
+  margin-left: 20px;
+  font-weight: 600;
+  position: relative;
+  transition: 1s;
+  z-index: 100;
+}
+
+.btnscontainer a span {
+  display: inline-block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 0px;
+  height: 48px;
+  background-color: white;
+  transition: 1s;
+  z-index: -1;
+}
+
+.btnscontainer a:hover span {
+  width: 150px;
+  border-radius: 10px;
+}
+
+.btnscontainer a:hover {
+  color: black;
+  border-radius: 10px;
+}
+
+.skills {
+  padding-top: 50px;
+}
+
+.txtContainer2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.txtContainer2 h3 {
+  position: relative;
+  z-index: 1;
+}
+
+.txtContainer2 h3::after {
+  content: "";
+  width: 50px;
+  height: 35px;
+  background: linear-gradient(#250029, white);
+  position: absolute;
+  top: -20px;
+  left: 0;
+  transform: rotate(10deg);
+  z-index: -1;
+  border-top-left-radius: 35px;
+  border-bottom-right-radius: 35px;
+}
+
+.skillContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 20px;
+}
+
+.skill {
+  width: 50%;
+  /*height: 200px;
+  */
+  padding-left: 30px;
+  padding-top: 20px;
+  margin-bottom: 20px;
+  transition: 0.5s;
+  cursor: pointer;
+}
+
+.skill:hover {
+  box-shadow: 0 10px 20px 3px #676868;
+}
+
+.skill img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  float: left;
+  margin-right: 30px;
+  margin-bottom: 30px;
+}
+
+.skill .right {
+  float: right;
+}
+
+.skill .left {
+  float: left;
+}
+
+.projects {
+  width: 100%;
+  background-color: #efefef;
+  padding: 70px 0;
+}
+
+.box-projects {
+  width: 70%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin: auto;
+  margin-top: 50px;
+}
+
+.box {
+  flex-basis: 48%;
+  text-align: center;
+  border-radius: 7px;
+  margin-bottom: 30px;
+  background-color: white;
+  position: relative;
+}
+
+.box img {
+  width: 100%;
+  height: 100%;
+  border-radius: 7px;
+}
+
+.overlay {
+  width: 100%;
+  height: 100%;
+  border-radius: 7px;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), #250029);
+  position: absolute;
+  top: 0;
+  opacity: 0;
+  transition: 1s;
+}
+
+.box:hover .overlay {
+  opacity: 1;
+}
+
+.disc {
+  width: 80%;
+  height: 100%;
+  position: absolute;
+  top: 50%;
+  left: 10%;
+  color: white;
+  opacity: 0;
+  transition: 1s;
+}
+
+.box:hover .disc {
+  opacity: 1;
+}
+
+.comments {
+  width: 100%;
+  padding: 70px;
+}
+
+.commentsBox {
+  padding: 50px 0;
+  width: 80%;
+  margin: auto;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: space-between;
+}
+
+.combox {
+  flex-basis: 25%;
+  background-color: white;
+  box-shadow: 0 10px 20px 3px #676868;
+  padding: 30px 10px;
+  border-radius: 5px;
+  text-align: center;
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+.combox:hover {
+  transform: translateY(10px);
+  border-radius: 50px;
+}
+
+.footer {
+  width: 100%;
+  background-color: #efefef;
+  padding: 50px 0;
+}
+
+address {
+  display: flex;
+  flex-direction: column;
+  padding-left: 50px;
+  line-height: 1.5;
+  margin-bottom: 30px;
+}
+
+.caninfo {
+  padding-left: 50px;
+  margin-bottom: 30px;
+  flex-basis: 40%;
+}
+
+address i {
+  margin-right: 20px;
+  margin-left: 20px;
+}
+
+address a {
+  color: black;
+  text-decoration: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+.form {
+  display: flex;
+  justify-content: center;
+  align-self: center;
+  flex-basis: 30%;
+  box-shadow: 1px 1px 3px black;
+  padding: 30px 10px;
+  border-radius: 20px;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  -ms-border-radius: 20px;
+  -o-border-radius: 20px;
+}
+
+.last {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin-top: 50px;
+}
+
+.container-info {
+  padding: 30px;
+  height: 100%;
+  /* box-shadow: 1px 1px 2px black; */
+}
+
+.form form {
+  display: flex;
+  flex-direction: column;
+}
+
+.form form input {
+  width: 300px;
+  height: 30px;
+  margin-bottom: 10px;
+  border: none;
+  border-radius: 5px;
+}
+
+.form form textarea {
+  border: none;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+}
+
+.btn {
+  /*padding: 15px 20px;
+  */
+  background-color: red;
+  color: white;
+  margin-top: 20px;
+  cursor: pointer;
+  transition: 0.5s;
+  -webkit-transition: 0.5s;
+  -moz-transition: 0.5s;
+  -ms-transition: 0.5s;
+  -o-transition: 0.5s;
+}
+
+.btn:hover {
+  transform: scale(1.05);
+  -webkit-transform: scale(1.05);
+  -moz-transform: scale(1.05);
+  -ms-transform: scale(1.05);
+  -o-transform: scale(1.05);
+}
